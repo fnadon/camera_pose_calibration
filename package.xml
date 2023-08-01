@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<package format="2">
+<package format="3">
   <name>camera_pose_calibration</name>
-  <version>0.1.2</version>
-  <description>Camera pose calibration using the OpenCV asymmetric circles pattern.</description>
+  <version>0.2.0</version>
+  <description>Camera pose calibration using the OpenCV asymmetric circles pattern. ROS2 version</description>
 
-	<maintainer email="r.m.ensing@delftrobotics.com">Ronald Ensing</maintainer>
+	<maintainer email="fnado079@uottawa.ca">Félix Nadon</maintainer>
 
 	<author email="j.c.gaiser@delftrobotics.com">Hans Gaiser</author>
 	<author email="j.a.vanegmond@tudelft.nl">Jeff van Egmond</author>
@@ -14,27 +14,27 @@
 
 	<license>Apache 2.0</license>
 
-	<buildtool_depend>catkin</buildtool_depend>
+	<buildtool_depend>ament_cmake</buildtool_depend>
 	<depend>cv_bridge</depend>
-	<depend>cmake_modules</depend>
-	<depend>dr_base</depend>
-	<depend>eigen_conversions</depend>
+	<!-- <depend>cmake_modules</depend> -->
+	<!-- <depend>dr_base</depend> -->
+	<!-- <depend>eigen_conversions</depend> -->
 	<depend>image_transport</depend>
 	<depend>geometry_msgs</depend>
-	<depend>message_generation</depend>
-	<depend>nodelet</depend>
 	<depend>pcl_ros</depend>
-	<depend>roscpp</depend>
+	<depend>rclcpp</depend>
 	<depend>sensor_msgs</depend>
-	<depend>tf</depend>
-	<depend>tf_conversions</depend>
+	<depend>tf2_ros</depend>
+	<depend>tf2_sensor_msgs</depend>
 	<depend>visualization_msgs</depend>
 
-	<test_depend>rosunit</test_depend>
-	<exec_depend>message_runtime</exec_depend>
 
-	<export>
-		<nodelet plugin="${prefix}/nodelet_plugins.xml" />
-	</export>
+	<build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+    <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
 
 </package>
